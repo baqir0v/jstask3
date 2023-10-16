@@ -1,15 +1,14 @@
-let verilenler = [1,2,3,4,5]
+let variable = [1,2,3,4,5]
 
-function ortalama(callback, ...verilenler) {
+function numbave(callback, ...variable) {
 
-    let cem = verilenler.reduce((number, deyer) => number + deyer, 0)
-    let orta = cem / verilenler.length
-    callback(orta)
+    let total = variable.reduce((number, value) => number + value, 0)
+    callback((total / variable.length))
 
 }
 
-function netice(orta) {
-    console.log(orta);
+function result(mid) {
+    console.log(mid);
 }
 
-ortalama(netice, ...verilenler)
+numbave(result, ...variable)

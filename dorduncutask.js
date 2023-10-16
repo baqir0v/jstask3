@@ -1,46 +1,46 @@
-function tektoplam(callback, ...verilenler) {
+function single(callback, ...variable) {
 
-    let cem = 0
+    let total = 0
 
 
-    for (let i = 0; i < verilenler.length; i++) {
+    for (let i = 0; i < variable.length; i++) {
 
-        if (verilenler[i] % 2 !== 0) {
-            cem += verilenler[i];
+        if (variable[i] % 2 !== 0) {
+            total += variable[i];
         }
     }
-    callback(cem);
+    callback(total);
 }
 
-function cuttoplam(callback, ...verilenler) {
+function couple(callback, ...variable) {
 
-    let cem = 0
+    let total = 0
 
 
-    for (let i = 0; i < verilenler.length; i++) {
+    for (let i = 0; i < variable.length; i++) {
 
-        if (verilenler[i] % 2 === 0) {
-            cem += verilenler[i];
+        if (variable[i] % 2 === 0) {
+            total += variable[i];
         }
     }
-    callback(cem);
+    callback(total);
 }
 
-function hasil(tektoplam, cuttoplam) {
-    return tektoplam * cuttoplam
+function outcome(single, couple) {
+    return single * couple
 }
 
-function netice(deyer) {
-    console.log(deyer);
+function result(value) {
+    console.log(value);
 }
 
-let verilenler = [1, 2, 3, 4, 5]
+let variable = [1, 2, 3, 4, 5]
 
-tektoplam((tektoplamres) => {
-    cuttoplam((cuttoplamres) => {
+single((singleres) => {
+    couple((coupleres) => {
 
-        let result = hasil(tektoplamres, cuttoplamres)
+        let sum = outcome(singleres, coupleres)
 
-        netice(result)
-    }, ...verilenler);
-}, ...verilenler);
+        result(sum)
+    }, ...variable);
+}, ...variable);

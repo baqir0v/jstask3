@@ -1,23 +1,23 @@
-let cem = 0
+let total = 0
 
-function tekcemi(callback , ...verilenler) {
+function single(callback , ...variable) {
 
-    for (let i = 0; i < verilenler.length; i++) {
+    for (let i = 0; i < variable.length; i++) {
 
-        if (verilenler[i] % 2 !== 0) {
-            cem += verilenler[i];
+        if (variable[i] % 2 !== 0) {
+            total += variable[i];
         }
     }
-    callback(cem);
+    callback(total);
 }
 
-function netice(cem) {
-    console.log(cem);
+function result(total) {
+    console.log(total);
 }
 
-let verilenler = [11, 23, 32, 40, 55]
+let variable = [11, 23, 32, 40, 55]
 
-tekcemi(netice, ...verilenler);
+single(result, ...variable);
 
 
 
